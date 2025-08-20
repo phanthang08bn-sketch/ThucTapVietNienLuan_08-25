@@ -12,4 +12,3 @@ $conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$pa
 if (!$conn)
     die("Kết nối đến PostgreSQL thất bại.");
 ?>
-
