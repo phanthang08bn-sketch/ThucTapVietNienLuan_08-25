@@ -278,7 +278,7 @@ $current_balance = floatval($transaction['current_balance'] ?? 0);
 $transaction_type_code = intval($transaction['type'] ?? 0);
 $transaction_type = ($transaction_type_code === 1) ? 'thu' : (($transaction_type_code === 2) ? 'chi' : 'khác');
 $amount = floatval($transaction['amount'] ?? 0);
-if ($amount <= 0) {
+if ($amount < 0) {
     echo "<p style='color:red;'>Số tiền phải lớn hơn 0.</p>";
     exit();
 }
